@@ -1,5 +1,5 @@
 // Guarda só a casca (esta página e os ícones). Os dados vêm sempre ao vivo da planilha.
-const CACHE = 'financas-v1';
+const CACHE = 'financas-v2';
 const ARQS = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARQS)).then(() => self.skipWaiting())));
 self.addEventListener('activate', e => e.waitUntil(caches.keys().then(ks =>
